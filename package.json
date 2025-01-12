@@ -1,0 +1,37 @@
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "description": "Your package description",
+  "main": "dist/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc --build",
+    "exec": "node --enable-source-maps",
+    "dev": "run-s build \"exec ./dist/tests/run.js\"",
+    "search": "run-s build \"exec ./dist/tests/search.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.33.1",
+    "@googleapis/customsearch": "^3.2.0",
+    "@tavily/core": "^0.0.2",
+    "dotenv": "^16.4.7",
+    "fp-ts": "^2.16.9",
+    "googleapis": "^144.0.0",
+    "immer": "^10.1.1",
+    "json-schema-to-zod": "^2.6.0",
+    "pretty-format": "^29.7.0",
+    "ts-dedent": "^2.2.0",
+    "ts-pattern": "^5.6.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
+  }
+}
